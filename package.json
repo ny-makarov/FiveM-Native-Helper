@@ -1,0 +1,61 @@
+{
+  "name": "fivem-native-helper",
+  "displayName": "FiveM Native Helper",
+  "description": "Autocompletion e documentação para todas as natives do FiveM em arquivos Lua no VSCode.",
+  "version": "1.0.0",
+  "publisher": "Paik Makarov",
+  "engines": {
+    "vscode": "^1.104.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Snippets"
+  ],
+  "activationEvents": [
+    "onLanguage:lua"
+  ],
+  "icon": "images/icon.png",
+  "main": "./out/extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "lua",
+        "extensions": [".lua"],
+        "aliases": ["Lua", "lua"]
+      }
+    ],
+    "configuration": {
+      "title": "FiveM Native Helper",
+      "properties": {
+        "fivemNativeHelper.luaStubsPath": {
+          "type": "string",
+          "default": "",
+          "description": "Caminho customizado para os stubs Lua do FiveM"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "pnpm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "pnpm run compile && pnpm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.104.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "22.x",
+    "@typescript-eslint/eslint-plugin": "^8.45.0",
+    "@typescript-eslint/parser": "^8.45.0",
+    "eslint": "^9.36.0",
+    "typescript": "^5.9.3",
+    "@vscode/test-cli": "^0.0.11",
+    "@vscode/test-electron": "^2.5.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ny-makarov/FiveM-Native-Helper.git"
+  }
+}
