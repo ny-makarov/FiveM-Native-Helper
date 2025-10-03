@@ -10,3 +10,7 @@ Extensão para VSCode que fornece **autocompletion e hover** para natives do Fiv
 
 - Hover with documentation  
   Hover com documentação
+
+  # Preview
+
+![FiveM Native Helper GIF](https://raw.githubusercontent.com/ny-makarov/FiveM-Native-Helper/refs/heads/main/images/representation.gif)
